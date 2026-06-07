@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị Password</title>
+    <style>
+        /* Thêm một chút CSS cho đẹp mắt */
+        .password-container {
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+        input {
+            padding: 8px;
+            font-size: 16px;
+        }
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="password-container">
+    <label for="myPass">Mật khẩu của bạn:</label>
+    <input type="password" id="myPass" readonly>
+    <button onclick="togglePassword()" id="btnToggle">Hiện</button>
+</div>
+
+<script>
+    // 1. Lưu password vào một biến như bạn yêu cầu
+    var secretKey = "Gemini_123456";
+
+    // 2. Đổ giá trị từ biến vào ô input khi trang vừa tải xong
+    document.getElementById("myPass").value = secretKey;
+
+    // 3. Hàm xử lý khi click vào button
+    function togglePassword() {
+        var passwordField = document.getElementById("myPass");
+        var btn = document.getElementById("btnToggle");
+
+        // Kiểm tra loại (type) hiện tại của input
+        if (passwordField.type === "password") {
+            passwordField.type = "text"; // Chuyển sang text để hiện mật khẩu
+            btn.innerText = "Ẩn";         // Đổi chữ trên nút thành "Ẩn"
+        } else {
+            passwordField.type = "password"; // Chuyển về password để ẩn đi
+            btn.innerText = "Hiện";          // Đổi chữ trên nút thành "Hiện"
+        }
+    }
+</script>
+
+</body>
+</html>

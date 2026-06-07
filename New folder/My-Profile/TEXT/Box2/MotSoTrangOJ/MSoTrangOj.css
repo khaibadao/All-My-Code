@@ -1,0 +1,341 @@
+:root 
+{
+	--xam: #808080;
+	--xam_xi: #464646;
+}
+
+*
+{
+	/*box-sizing: border-box;*/
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+
+/*/////////////////////////*/
+
+/* Phần Khung */
+
+.All-Screen
+{
+	display: grid;
+	/*height: 100vh;*/
+	/*grid-template-rows: 80px 1fr;*/
+}
+
+.Taskbar
+{
+	height: 80px;
+	width: 100%;
+	background-image: linear-gradient(90deg, #DEFFFE,#7DFFF7);
+	position: relative;
+}
+
+.Nen
+{
+	height: calc(100vh - 80px);
+	width: 100vw;
+	display: flex;
+	overflow: hidden; /* Ngăn nội dung tràn */
+}
+
+
+/*/////////////////*/
+
+/*Phần trái khung và phải khung */
+
+/*//////////////////////*/
+
+.Box_right
+{
+	height: 100%;
+	width: 80%;
+	background-color: #CAFFFE;
+}
+
+.Khuon
+{ 
+	height: 70px;
+	width: 50px;
+	border-radius: 10px;
+	background-color: #;
+}
+
+.Box_name
+{
+	height: 100%;
+	width: 240px;
+	background-color: white;
+	position: absolute;
+	align-content: center;
+	justify-items: center;
+	background-color: transparent;
+	border-box: box-sizing
+	/*left: 0;*/
+}
+
+.Box_name h2
+{
+	font-size: 25px;
+	color: #464646;
+	font-family: Roboto, monospace;
+}
+
+.Box_back
+{
+	height: 100%;
+	width: 150px;
+	background-color: red;
+	position: absolute;
+	right: 0;
+	background-color: transparent;
+	align-content: center;
+	justify-items: center;
+}
+/*///////////////////////*/
+
+/*Hình tròn trong logo*/
+
+.Circle
+{
+	height: 40px;
+	width: 40px;
+	background-color: transparent;
+	border-radius: 50%;
+	transform: translate(-20px);
+}
+
+.Circle img
+{
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+/*///////////////////////*/
+
+/*Các phần dẫn tới các trang OJ*/
+
+.Bo_cuc
+{
+	height: 50%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 300px;
+}
+
+a.Khoi_bo_tron
+{
+	height: 55%;
+	width: 25%;
+	border-radius: 40px;
+	border: 3px solid #808080;
+	text-decoration: none;
+	box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/*///////////////////*/
+
+/*Các phần để dẫn tới các trang OJ*/
+
+/*///////////////////////*/
+
+/*Phần header*/
+
+.Khoi_bo_tron .header
+{
+	height: 30%;
+	border-bottom: 3px solid #808080;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	background-color: #9CE1E6;
+	border-radius: 40px;
+}
+
+
+/*Phần nội dung trong Header*/
+
+.Name_all_header h1
+{
+	padding: 20px;
+	font-size: 25px;
+	font-family: 'Helvetica', monospace;
+	font-weight: bold;
+	/*color: #066952;*/
+	color: var(--xam_xi);
+}
+
+/*////////////////////////////*/
+
+/*Phần body*/
+
+.Khoi_bo_tron .body
+{
+	height: calc(100% - 31%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	border-radius: 40px;
+}
+
+.Anh_body
+{
+	height: 70%;
+	width: 85%;
+	/*background-color: mediumaquamarine;*/
+	/*border: 1px solid black;*/
+}
+
+.Anh_body img 
+{
+	height: 70%%;
+	width: 100%;
+	object-fit: cover;
+	transform: translateY(10px);
+}
+
+/*Một số hiệu chỉnh*/
+
+.Luyen_code img
+{
+	height: 70%%;
+	width: 100%;
+	object-fit: cover;
+	transform: translateY(15px);
+}
+
+.Vnoi img 
+{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	transform: translateY(10px);
+	transform: translateX(10px);
+}
+
+.Lqd img {
+	height: 55%%;
+	width: 100%;
+	object-fit: cover;
+	transform: translateY(10px);
+	/*size: 65%*/
+}
+
+.CF img 
+{
+	height: 70%%;
+	width: 100%;
+	object-fit: cover;
+	transform: translateY(20px);
+}
+/*/////////////////////////*/
+
+/*Đường dẫn trở lại và các trang web khác */
+
+.Box_left 
+{
+	height: 100%;
+	width: 20%;	
+	display: flex;
+	background-color: #BEF8FC;
+	align-items: center;
+	justify-content: center;
+	/*box-sizing: border-box;*/
+}
+
+.Khung_box_left
+{
+	height: 75%;
+	width: 80%;
+	/*background-color: white;*/
+	display: grid;
+	grid-template-columns: 1fr;
+    grid-gap: 70px;
+    justify-items: center;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+.Boxmini_box_left
+{
+	border-radius: 10px;
+	border: 3px solid #808080;
+	width: 85%;
+	height: 75px;
+	background-color: white; 
+	/*gap: 30px;*/
+	transform: translateY(-20px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+	text-align: center;
+	justify-content: center;
+}
+
+
+a.Boxmini_box_left
+{
+	text-decoration: none;
+	text-align: center;
+	/*display: flex;*/
+	align-items: center;
+	justify-content: center;
+}
+
+.Box_con
+{
+	height: 95%;
+	width: 95%;
+	/*border: 1px solid black;*/
+	/*background-color: mediumaquamarine;*/
+	align-content: center;
+	justify-content: center;
+}
+
+.Box_con h3
+{
+	font-family: 'Verdana', monospace;
+	color: var(--xam_xi);
+	font-size: 20px;
+}
+
+
+.Boxmini_box_left:hover {
+	transition: all 0.3s ease;
+	background-color: var(--xam);
+	border: 3px solid white;
+}
+
+.Boxmini_box_left:hover h2
+{
+	transform: translateY(-1px);
+	transition: all 0.3s ease;
+	color: #fff;
+}
+
+.Boxmini_box_left:hover h2
+{
+	transform: translateY(-1px);
+	transition: all 0.3s ease;
+	color: #fff;
+}
+
+.Boxmini_box_left img 
+{
+	height: 44px;
+	width: 44px;
+	border-radius: 50%;
+	object-fit: cover;
+	filter: invert(30%);
+	transform: translateY(14px);
+	transition: all 0.3s ease;
+}
+.Boxmini_box_left:hover img
+{
+	filter: invert(100%);
+}
+/*/////////////////////////*/

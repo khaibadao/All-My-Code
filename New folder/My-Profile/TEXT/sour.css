@@ -1,0 +1,288 @@
+:root 
+{
+	--xam: #808080;
+	--xam_xi: #464646;
+}
+
+
+/*///////////////////////*/
+
+/*///////////////////////*/
+*
+{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.container
+{
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+}
+
+/*//////////////////////////////*/
+
+/*Thanh taskbar*/
+/*
+.Taskbar
+{
+	height: 50px;
+	width: 100%;
+	background-color: #4FF2EC;
+	position: fixed;
+
+}*/
+/*//////////////////////////////*/
+.box
+{
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+}
+
+/*Phần Ảnh */
+
+.Co_dinh
+{
+	position: fixed;
+}
+.b1
+{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 59%;
+	background-image: linear-gradient(100deg, #E4FFFA, #6CFFF1);
+}
+
+.b1_f
+{
+	position: absolute;
+	height: 140px;
+	width: 400px;
+	background-color: transparent;
+	/*background-color: white;*/
+	top: 0;
+	left: 0;
+	text-align: center;
+	align-content: center;
+	justify-items: center;
+	box-sizing: border-box;
+	transform: translate(-35px);
+}
+
+
+.b1_f p{
+	font-family: Arial;
+	font-size: 15px;
+	color: #555555;
+}
+
+
+.b1 img
+{
+	border-radius: 10px;
+	border: 3px solid white;
+	height: 400px;
+	width: 370px;
+	object-fit: cover;   /* dùng để căn đều ảnh cho không bị mếu ! */
+	background-size: cover;
+	transform: translateY(-50px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+
+/*Phần giới thiệu bản thân */
+.b2
+{
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 51%;
+	background-color: #DAFFF7;
+	/*background-image: linear-gradient(-105deg, #E4FFFA, #6CFFF1);*/
+}
+
+/*///////////////////////////////////*/
+
+
+/*Bố cục trong phần 2*/
+
+.Box1
+{
+	align-content: center;
+	justify-items: center;
+	height: 30%;
+	width: 100%;
+	/*background-color: yellow;*/
+}
+
+
+.Nd1
+{
+	/*align-content: center;*/
+	height: 200px;
+	width: 50%;
+	/*border: 2px solid black;*/
+	/*background-color: white;*/		
+	transform: translateX(-100px);
+	transform: translateY(40px);
+}
+
+.Nd1 h1
+{
+	padding: 10px;
+	font-size: 33px;
+	font-family: 'Arial';
+	color: darkslategray;
+	text-align: left;
+	justify-content: center;
+	transform: translateY(-20px);
+}
+
+
+.Nd1 p 
+{
+	font-size: 25px;
+	font-family: Arial;
+	color: darkslategray;
+	text-align: left;
+	transform: translate(10px);
+}
+
+
+/*//////////////////////////////////*/
+
+.Box2
+{
+	height: 40%;
+	width: 100%;
+	/*background-color: gray;*/
+	align-items: center;
+	justify-items: center;
+	display: grid;
+}
+
+.Nd2
+{
+	/*padding: 20px;*/
+	/*margin: 10px;*/
+	border-radius: 10px;
+	border: 1px solid #6CFFF1;
+	height: 70px;
+	width: 35%;
+	background-color: white;
+	/*transform: translateY(40px);*/
+	gap: 30px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+	/*align-items: center;*/
+	align-content: center;
+}
+
+.Nd2 h2
+{
+	font-family: 'Roboto', monospace;
+	color: var(--xam_xi);
+}
+
+a.Nd2
+{
+	text-decoration: none;
+}
+
+.Nd2:hover {
+	/*transform: translateY(-3px);*/
+	transition: all 0.3s ease;
+	background-color: var(--xam);
+	border: 3px solid white;
+}
+
+.Nd2:hover h2
+{
+	transform: translateY(-3px);
+	transition: all 0.3s ease;
+	color: #fff;
+}
+
+
+
+
+
+/*////////////////////////////////*/
+
+.Box3
+{
+	height: 30%;
+	width: 100%;
+	position: relative;
+	/*background-color: white;*/
+}
+
+.Nd3_B1
+{
+	height: 100px;
+	width: 100%;
+	/*background-color: lemonchiffon;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 25px;
+	transform: translateY(70px);
+}
+
+
+.Lgo
+{
+	/*margin: 10px;*/
+	height: 30px;
+	width: 30px;
+	/*background-color: navajowhite;*/
+	border-radius: 50%;
+	filter: invert(20%);
+
+}
+
+.Lgo img{
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.Ban_quyen
+{
+	position: absolute;
+	/*background-color: yellow;*/
+	bottom: 0;
+	height: 60px;
+	width: 100%;
+	text-align: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.Ban_quyen p 
+{
+	font-family: Arial;
+	font-size: 17px;
+	color: var(--xam);
+	transform: translateY(-40px);
+	/*box-shadow: ;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+

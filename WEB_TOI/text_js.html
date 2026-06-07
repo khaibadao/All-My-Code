@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+
+	<!--
+		Các giá trị cần học từ js!
+		
+		console.log(): 
+		Date type:
+		var: kiểu dữ liệu chung cho toàn bộ (logic, string, int, ...)
+
+		document.write: in ra màn hình chính
+		window.prompt("<content>"): Lấy giá trị được nhập từ trang 
+
+		Cấu trúc rẽ nhánh: if else (tương tự C++)
+		
+		parseInt -> chuyển đổi từ định dạng ban đầu -> Int
+
+		for(var i = 0; i < <gia_tri> ; i++)
+		while(<dk>)
+
+		object
+		structer: 
+			var your_self = {
+				name: "Khai",
+				age: 19, 
+				major: "DE",
+				address{
+					country: "Viet Nam",
+					city: "Da Nang"
+					
+				}
+			}
+
+		function
+		structer: 
+			var name1 = function(<tham số>) {
+				<Block chain> 
+			}
+
+		array
+		structer:
+			var a = {1, 2, 3}
+			<truy cập tương tự như C++>
+			các thao tác tương tự
+			a.pop() -> xóa phẩn tử cuối cùng
+			a.push() -> thêm phẩn tử vào cuối mảng
+			a.lenght -> chiều dài của xâu
+			một mảng có thể có nhiều datatype khác nhau và có thể đồng thời in ra màn hình những giá trị đó
+			-> var a = {"helo", 1, true} // 3 datatype khác nhau 
+
+		string
+		structer: 
+
+		Cơ chế DOM (Document Object Model)
+
+
+	
+	-->
+
+</head>
+<body>
+	<!-- <h3>
+		Hãy nhập tên của bạn:
+		<input type="text" name="" id = "F1" value>
+		<button onclick="input_name()">OK</button>
+	</h3>
+	<div id="loi_chao">
+
+	</div>
+	<script>
+		var input_name = function()
+		{
+			var name = document.getElementById("F1").value
+			name = "Xin chào " + name
+			document.getElementById("loi_chao").innerHTML = name
+		}
+	</script> -->
+
+	<p>
+		
+	<h3> 
+		Hãy nhập mật khẩu của bạn:  <input type="password" id="Pass" value> 
+		<button onclick="Pass"></button>
+	</h3>
+
+	<div id="Hidden_Pass">
+		
+	</div>
+
+	<script>
+		var Pass = function(){
+			var your_pass = document.getElementById("Pass").value 
+			document.getElementById("Hidden_Pass").innerHTML = your_pass
+		}
+	</script>
+</body>
+</html>
