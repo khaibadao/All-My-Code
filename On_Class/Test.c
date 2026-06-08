@@ -12,7 +12,7 @@
 	+ floor(x): Sẽ làm tròn xuống vd: 3.4 -> 4
 	+ ceil(x): Sẽ làm tròn lên vd: 5.9 -> 5;
 	+ trunc(x): Sẽ cắt bỏ đuôi thập phân phía sau vd: 5.5 -> 5 (ít dùng vì không hiệu quả bằng việc ép trực tiếp)
-	
+
 	pow(x, <số mũ>) vd: pow(4, 4) -> 4^4 
 	Lưu ý: pow sẽ có định dạng LÀ SỐ THỰC vậy nên TẤT CẢ CÁC GIÁ TRỊ TRONG POW PHẢI CÓ KIỂU DỮ LIỆU LÀ SỐ THỰC
 	-> Nó sẽ có kiểu như thế này: pow(type_double a, type_double b);
