@@ -4,10 +4,7 @@
 
 /*
 
-	Information: 
-	Name: ManhDung
-	ID: DE210137
-	Project: Workshop2.
+hihi
 
 */
 
