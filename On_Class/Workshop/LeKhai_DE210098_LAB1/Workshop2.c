@@ -47,15 +47,20 @@ void Information (int i){
 	}while(salary < 0);
  
 	total_salary = salary + allowance(salary);
- 
+	
 	summary_salary += (total_salary - taxx(total_salary));
- 
-	(check_allowance(salary) == 1) ? ++twentyfive : (check_allowance(salary) == 2) ? ++fifteen : ++ten;
- 
-	printf("\n--> Basic Salary: %.2lf\n", salary);
-	printf("--> Allowance: %.2lf\n", allowance(salary));
-	printf("--> Tax deduction: %.2lf\n", taxx(total_salary));
-	printf("--> Net Income: %.2lf\n\n", total_salary - taxx(total_salary));
+	
+	printf("Basic salary: .2%f\n", salary);
+	printf("Allowance: .2%f\n", allowance(salary));
+	printf("Tax deduction: .2%f\n", taxx(salary));
+	printf("Net income: .2%f", total_salary - taxx(salary));
+	
+	// Basic salary
+	// Allowance
+	// Tax duction
+	// Net income
+	
+	
  
 }
  
@@ -63,9 +68,9 @@ void statistics(){
 	printf("\n");
 	printf("=== Salary Statistics ===\n\n");	
 	printf("--> Total salary cost of the company: %.2lf\n", summary_salary);
-	printf("--> Number of employees with allowance of 25%: %d\n", twentyfive);
-	printf("--> Number of employees with allowance of 15%: %d\n", fifteen);
-	printf("--> Number of employees with allowance of 10%: %d\n", ten);
+	printf("--> Number of employees with allowance of 25%%: %d\n", twentyfive);
+	printf("--> Number of employees with allowance of 15%%: %d\n", fifteen);
+	printf("--> Number of employees with allowance of 10%%: %d\n", ten);
 }
  
  

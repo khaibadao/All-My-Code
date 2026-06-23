@@ -1,0 +1,14 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {section}{\numberline {1}Đề Tài Nghiên Cứu}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Tên đề tài}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Lý do chọn đề tài}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Câu Hỏi Nghiên Cứu (Research Question)}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Research Question (RQ)}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Phân tích RQ theo khung PICO}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Từ Khóa (Keywords)}{2}{section.3}%
+\contentsline {section}{\numberline {4}Tiêu Chí Lựa Chọn Nghiên Cứu}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Tiêu chí chọn bài (Inclusion Criteria)}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Tiêu chí loại bài (Exclusion Criteria)}{3}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Tổng hợp tiêu chí (PRISMA-style)}{3}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Kế Hoạch Thực Hiện}{3}{section.5}%
+\contentsline {section}{Tài Liệu Tham Khảo}{4}{Item.14}%

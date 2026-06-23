@@ -1,0 +1,290 @@
+\documentclass[12pt, a4paper]{article}
+
+% ============================================================
+% PACKAGES
+% ============================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}           % Tiếng Việt
+\usepackage[vietnamese]{babel}     % Ngôn ngữ tiếng Việt
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{cite}
+
+% ============================================================
+% PAGE SETUP
+% ============================================================
+\geometry{
+    top=2.5cm,
+    bottom=2.5cm,
+    left=3cm,
+    right=2cm
+}
+
+% ============================================================
+% COLORS
+% ============================================================
+\definecolor{primaryblue}{RGB}{0, 70, 127}
+\definecolor{accentred}{RGB}{192, 0, 0}
+\definecolor{lightgray}{RGB}{245, 245, 245}
+\definecolor{darkgray}{RGB}{80, 80, 80}
+
+% ============================================================
+% HYPERLINK SETUP
+% ============================================================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primaryblue,
+    urlcolor=primaryblue,
+    citecolor=accentred
+}
+
+% ============================================================
+% HEADER & FOOTER
+% ============================================================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{darkgray}{Nghiên cứu NLP -- Xử lý Ngôn ngữ Tự nhiên}}
+\fancyhead[R]{\small\textcolor{darkgray}{\thepage}}
+\fancyfoot[C]{\small\textcolor{darkgray}{\textit{Báo cáo môn học -- \the\year}}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ============================================================
+% SECTION FORMATTING
+% ============================================================
+\titleformat{\section}
+    {\large\bfseries\color{primaryblue}}
+    {\thesection.}{0.5em}{}[\titlerule]
+
+\titleformat{\subsection}
+    {\normalsize\bfseries\color{darkgray}}
+    {\thesubsection.}{0.5em}{}
+
+% ============================================================
+% DOCUMENT
+% ============================================================
+\begin{document}
+
+% ------------------------------------------------------------
+% TITLE PAGE
+% ------------------------------------------------------------
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+
+    {\Large\bfseries TRƯỜNG ĐẠI HỌC [TÊN TRƯỜNG]}\\[0.3cm]
+    {\large KHOA [TÊN KHOA]}\\[2cm]
+
+    \rule{\linewidth}{1.5pt}\\[0.4cm]
+    {\LARGE\bfseries\color{primaryblue}
+        BÁO CÁO NGHIÊN CỨU\\[0.3cm]
+        XỬ LÝ NGÔN NGỮ TỰ NHIÊN\\
+        (NATURAL LANGUAGE PROCESSING)
+    }\\[0.4cm]
+    \rule{\linewidth}{1.5pt}\\[2cm]
+
+    \begin{tabular}{ll}
+        \textbf{Môn học:}       & [Tên môn học] \\[0.3cm]
+        \textbf{Giảng viên:}    & [Tên giảng viên] \\[0.3cm]
+        \textbf{Nhóm:}          & [Số nhóm] \\[0.3cm]
+        \textbf{Thành viên:}    & [Họ tên thành viên 1] \\
+                                & [Họ tên thành viên 2] \\
+                                & [Họ tên thành viên 3] \\[0.3cm]
+        \textbf{Năm học:}       & 2024 -- 2025 \\
+    \end{tabular}
+
+    \vfill
+    {\large\the\year}
+\end{titlepage}
+
+% ------------------------------------------------------------
+% TABLE OF CONTENTS
+% ------------------------------------------------------------
+\tableofcontents
+\newpage
+
+% ============================================================
+% SECTION 1: ĐỀ TÀI NGHIÊN CỨU
+% ============================================================
+\section{Đề Tài Nghiên Cứu}
+
+\subsection{Tên đề tài}
+
+\begin{center}
+    \colorbox{lightgray}{%
+        \parbox{0.9\textwidth}{%
+            \centering\vspace{0.3cm}
+            {\large\bfseries Xử lý Ngôn ngữ Tự nhiên (Natural Language Processing -- NLP)}\\
+            \vspace{0.1cm}
+            \textit{Ứng dụng mô hình Transformer vào phân loại văn bản tiếng Việt}
+            \vspace{0.3cm}
+        }%
+    }
+\end{center}
+
+\subsection{Lý do chọn đề tài}
+
+Xử lý ngôn ngữ tự nhiên (NLP) là một lĩnh vực quan trọng trong trí tuệ nhân tạo, 
+đặc biệt với sự bùng nổ của các mô hình ngôn ngữ lớn như BERT, GPT và các biến thể. 
+Đối với tiếng Việt -- một ngôn ngữ có đặc thù về thanh điệu và cấu trúc -- 
+việc nghiên cứu và ứng dụng NLP còn nhiều tiềm năng phát triển.
+
+% ============================================================
+% SECTION 2: CÂU HỎI NGHIÊN CỨU
+% ============================================================
+\section{Câu Hỏi Nghiên Cứu (Research Question)}
+
+\subsection{Research Question (RQ)}
+
+\begin{center}
+    \fbox{%
+        \parbox{0.85\textwidth}{%
+            \vspace{0.3cm}
+            \centering
+            \textit{``What transformer-based NLP models have been applied to Vietnamese 
+            text classification in the last 3 years?''}
+            \vspace{0.3cm}
+        }%
+    }
+\end{center}
+
+\vspace{0.5cm}
+\noindent\textbf{Dịch nghĩa:} Những mô hình NLP dựa trên kiến trúc Transformer nào 
+đã được ứng dụng vào bài toán phân loại văn bản tiếng Việt trong 3 năm gần đây?
+
+\subsection{Phân tích RQ theo khung PICO}
+
+\begin{table}[h!]
+\centering
+\begin{tabularx}{0.9\textwidth}{>{\bfseries}l X}
+\toprule
+Thành phần & Nội dung \\
+\midrule
+\textbf{P}opulation    & Văn bản tiếng Việt (tin tức, mạng xã hội, tài liệu) \\
+\textbf{I}ntervention  & Mô hình Transformer (BERT, PhoBERT, XLM-R, \ldots) \\
+\textbf{C}omparison    & Các phương pháp truyền thống (SVM, LSTM, CNN, \ldots) \\
+\textbf{O}utcome       & Độ chính xác phân loại văn bản (Accuracy, F1-score) \\
+\bottomrule
+\end{tabularx}
+\caption{Phân tích câu hỏi nghiên cứu theo khung PICO}
+\end{table}
+
+% ============================================================
+% SECTION 3: TỪ KHÓA
+% ============================================================
+\section{Từ Khóa (Keywords)}
+
+\begin{table}[h!]
+\centering
+\begin{tabularx}{0.85\textwidth}{c >{\bfseries}l X}
+\toprule
+\textbf{STT} & \textbf{Từ khóa} & \textbf{Giải thích} \\
+\midrule
+1 & Natural Language Processing (NLP) 
+  & Lĩnh vực AI liên quan đến xử lý và hiểu ngôn ngữ của con người \\
+\addlinespace
+2 & Transformer / BERT 
+  & Kiến trúc mạng nơ-ron tiên tiến được sử dụng rộng rãi trong NLP \\
+\addlinespace
+3 & Vietnamese Text Classification 
+  & Bài toán phân loại văn bản áp dụng cho ngôn ngữ tiếng Việt \\
+\bottomrule
+\end{tabularx}
+\caption{Ba từ khóa chính của nghiên cứu}
+\end{table}
+
+\noindent\textbf{Chuỗi tìm kiếm gợi ý:}
+\begin{quote}
+    \texttt{("NLP" OR "Natural Language Processing") AND ("Transformer" OR "BERT") 
+    AND ("Vietnamese" OR "text classification") AND (2022:2025)}
+\end{quote}
+
+% ============================================================
+% SECTION 4: TIÊU CHÍ CHỌN / LOẠI BÀI
+% ============================================================
+\section{Tiêu Chí Lựa Chọn Nghiên Cứu}
+
+\subsection{Tiêu chí chọn bài (Inclusion Criteria)}
+
+\begin{enumerate}[leftmargin=*, label=\textbf{I\arabic*.}]
+    \item Bài báo xuất bản từ năm \textbf{2022 đến nay} (3 năm gần đây).
+    \item Nghiên cứu liên quan đến \textbf{NLP cho tiếng Việt} hoặc ngôn ngữ có đặc thù tương tự.
+    \item Có sử dụng \textbf{mô hình học sâu} (deep learning) hoặc kiến trúc Transformer.
+    \item Được đăng trên \textbf{tạp chí/hội nghị khoa học} có peer-review (ACL, EMNLP, IEEE, Scopus\ldots).
+    \item Có \textbf{kết quả thực nghiệm} với dataset cụ thể và metrics đánh giá rõ ràng.
+\end{enumerate}
+
+\subsection{Tiêu chí loại bài (Exclusion Criteria)}
+
+\begin{enumerate}[leftmargin=*, label=\textbf{E\arabic*.}]
+    \item Bài viết \textbf{không phải tiếng Anh hoặc tiếng Việt}.
+    \item Nghiên cứu chỉ dùng \textbf{phương pháp truyền thống} (rule-based, không có ML/DL).
+    \item Bài \textbf{trùng lặp} hoặc chỉ là abstract (không có full-text).
+    \item \textbf{Không có kết quả thực nghiệm} hoặc không so sánh với baseline.
+    \item Bài thuộc \textbf{lĩnh vực khác} (xử lý ảnh, âm thanh đơn thuần không kết hợp NLP).
+\end{enumerate}
+
+\subsection{Tổng hợp tiêu chí (PRISMA-style)}
+
+\begin{table}[h!]
+\centering
+\begin{tabularx}{0.9\textwidth}{l X X}
+\toprule
+\textbf{Tiêu chí} & \textbf{Chọn (Inclusion)} & \textbf{Loại (Exclusion)} \\
+\midrule
+Thời gian    & 2022 -- nay              & Trước 2022 \\
+Ngôn ngữ     & Tiếng Anh / Việt         & Ngôn ngữ khác \\
+Phương pháp  & Deep Learning, Transformer & Rule-based thuần túy \\
+Nguồn        & Peer-reviewed journal/conf & Blog, báo cáo không rõ nguồn \\
+Nội dung     & Có thực nghiệm, metrics   & Chỉ có abstract, trùng lặp \\
+\bottomrule
+\end{tabularx}
+\caption{Bảng tổng hợp tiêu chí lựa chọn nghiên cứu}
+\end{table}
+
+% ============================================================
+% SECTION 5: KẾ HOẠCH THỰC HIỆN (tùy chọn)
+% ============================================================
+\section{Kế Hoạch Thực Hiện}
+
+\begin{enumerate}
+    \item \textbf{Tuần 1--2:} Tìm kiếm tài liệu trên Google Scholar, Semantic Scholar, ACL Anthology.
+    \item \textbf{Tuần 3--4:} Sàng lọc theo tiêu chí Inclusion/Exclusion.
+    \item \textbf{Tuần 5--6:} Đọc và trích xuất thông tin từ các bài được chọn.
+    \item \textbf{Tuần 7--8:} Tổng hợp, phân tích và viết báo cáo.
+\end{enumerate}
+
+% ============================================================
+% TÀI LIỆU THAM KHẢO (placeholder)
+% ============================================================
+\section*{Tài Liệu Tham Khảo}
+\addcontentsline{toc}{section}{Tài Liệu Tham Khảo}
+
+\begin{thebibliography}{9}
+
+\bibitem{devlin2019bert}
+Devlin, J., Chang, M. W., Lee, K., \& Toutanova, K. (2019).
+\textit{BERT: Pre-training of deep bidirectional transformers for language understanding}.
+NAACL-HLT 2019.
+
+\bibitem{phobert2020}
+Nguyen, D. Q., \& Nguyen, A. T. (2020).
+\textit{PhoBERT: Pre-trained language models for Vietnamese}.
+Findings of EMNLP 2020.
+
+\bibitem{vaswani2017attention}
+Vaswani, A., et al. (2017).
+\textit{Attention is all you need}.
+NeurIPS 2017.
+
+\end{thebibliography}
+
+\end{document}

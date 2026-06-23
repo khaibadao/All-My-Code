@@ -1,50 +1,30 @@
 #include <stdio.h>
-#include <math.h>
 #include <stdbool.h>
-#include <stdlib.h>
+#include <math.h>
 
+int check_chr(char c){
+	if('0' <= c && c <= '9') return 1; 
+	if('a' <= c && c <= 'z') return 2;
+	if('A' <= c && c <= 'Z') return 3;
+	return 0;
+}
 
+char H_to_T(char c){
+	return c + 32;
+}
 
-/*
-	Trong C, sẽ có thư viện là math.h
-	Trong thằng math.h này sẽ có bao gồm 4 thằng làm tròn số
-	+ round(x): Sẽ làm tròn đến chữ số thập phân gần nhất.
-	+ floor(x): Sẽ làm tròn xuống vd: 3.4 -> 4
-	+ ceil(x): Sẽ làm tròn lên vd: 5.9 -> 5;
-	+ trunc(x): Sẽ cắt bỏ đuôi thập phân phía sau vd: 5.5 -> 5 (ít dùng vì không hiệu quả bằng việc ép trực tiếp)
-
-	pow(x, <số mũ>) vd: pow(4, 4) -> 4^4 
-	Lưu ý: pow sẽ có định dạng LÀ SỐ THỰC vậy nên TẤT CẢ CÁC GIÁ TRỊ TRONG POW PHẢI CÓ KIỂU DỮ LIỆU LÀ SỐ THỰC
-	-> Nó sẽ có kiểu như thế này: pow(type_double a, type_double b);
-
-	sqrt(n): căn 2 của n (cũng giống như pow, nó sẽ có định dạng là số thực). 
-	abs(n): trị tuyệt đối
-	__gdc(a, b): ước chung lớn nhất
-
-*/
-
+char T_to_H(char c){
+	return c - 32;
+}
 
 int main()
 {
+	char n; scanf("%c", &n);
+	int ans = check_chr(n);
+	(ans == 1) ? printf("La so") : (ans == 2) ? printf("La chu thuong") : (ans == 3) ? printf("La chu hoa") : printf("Ki tu khac !");
 	
+	printf("\n");
+	if(ans == 3) printf("Ki tu thuong la: %c", H_to_T(n));	
+	if(ans == 2) printf("Ki tu thuong la: %c", T_to_H(n));
 	return 0;
-}  
-
-                  
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
+}
