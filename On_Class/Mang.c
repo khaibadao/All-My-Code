@@ -16,18 +16,17 @@ Trong đầu vào sẽ nhập số lượng kí tự của mảng (tối đa 100
  
 */
  
-// Variable
+// Variable	    
  
 int a[MAX];
 int n;
-int Sum = 0;
-int ma = INT_MIN, mi = INT_MAX;
-int choice;
-int check = 0;
 int gt;
-int check_sort = 0;
- 
+int choice;
+int check_input_data = 0;
+       
+	     
 // ------------------------------------------- //
+
 
 int finding(int a[], int n, int gt){
 	for(int i = 0 ; i < n ; ++i){
@@ -35,15 +34,15 @@ int finding(int a[], int n, int gt){
 	}
 	return -1;
 }
-
-
+ 
+ 
 void menu()
 {
 	printf("\n ---- Menu ----\n");
 	printf("1. Input Data\n");
 	printf("2. Display Array\n");
 	printf("3. Search for a number\n");
-	printf("4. Calculate Statistics (Sum, Average, Max, Min)\n");
+	printf("4. Calculate Statistics (Sum, Average, Maximum, Minimum)\n");
 	printf("5. Exit!\n");
 }
  
@@ -54,7 +53,7 @@ void input_data(int a[], int *n){
 	{
 		printf("Enter the number of elements (1 - 100): ");
 		scanf("%d", n);
-		if(*n < 1 || *n > 100) printf("Invailed size!. Please enter a number betwwen 1 and 100.\n");
+		if(*n < 1 || *n > 100) printf("Invalid size!. Please enter a number between 1 and 100.\n");
 	}
 	while(*n < 1 || *n > 100);
  
@@ -78,50 +77,65 @@ void display_array(int a[], int n){
 // 3.
  
 void search_for_a_number(int a[], int n, int *gt){
-	
+ 
 	printf("Enter the number you want to search for: ");
 	scanf("%d", gt);
-	if(finding(a, n, *gt) != -1){
-		printf("The number %d is found at index %d.\n", *gt, finding(a, n, *gt));
-	}else printf("The number %d is not found in the array!", *gt);
+ 
+	int i = finding(a, n, *gt);
+ 
+	if(i != -1){
+		printf("\n--> The number %d is found at index %d.\n\n", *gt, i);
+	}else printf("\n--> The number %d is not found in the array!\n", *gt);
 }
  
 // 4. 
  
 void calculate_statistics(int a[], int n){
+	int Sum = 0;
+	float Avarage;
+	int ma = a[0], mi = a[0];
 	for(int i = 0 ; i < n ; ++i){
 		Sum += a[i];
 		if(a[i] > ma) ma = a[i];
 		if(a[i] < mi) mi = a[i];
 	}
  
-	printf("Sum: %d\n", Sum);
-	printf("Average: .2%f\n", (double)Sum/n);
-	printf("Maximum: %d\n", ma);
-	printf("Miximum: %d\n", mi);
+	Avarage = (double)Sum/n;
+ 
+	printf("--> Sum: %d\n", Sum);
+	printf("--> Average: %.2f\n", Avarage);
+	printf("--> Maximum: %d\n", ma);
+	printf("--> Minimum: %d\n", mi);
 }
  
- 
+
 int main()
 {
 	while(1){
 		menu();
 		do
 		{
-			printf("Enter your choice: ");
+			printf("\n--> Enter your choice: ");
 			scanf("%d", &choice);
-			if(choice < 1 || choice > 5) printf("Invailed value. Please try again");
+			if(choice < 1 || choice > 5) printf("Invalid value. Please try again");
 		}while(choice < 1 || choice > 5);
  
-		if(choice == 1) input_data(a, &n);
-		if(choice == 2) display_array(a, n);
-		if(choice == 3) search_for_a_number(a, n, &gt);
-		if(choice == 4) calculate_statistics(a, n);
 		if(choice == 5){
 			printf("Exiting the program!");
 			break;
 		}
+		
+		if(choice == 1) ++check_input_data;
+		
+		if(!check_input_data) printf("\nYou did not type the input data. Please try again!\n");
+		else
+		{
+			if(choice == 1) input_data(a, &n);
+			if(choice == 2) display_array(a, n);
+			if(choice == 3) search_for_a_number(a, n, &gt);
+			if(choice == 4) calculate_statistics(a, n);
+		}
 	}
- 
 	return 0;
 }
+ 
