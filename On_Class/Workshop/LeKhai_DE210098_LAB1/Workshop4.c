@@ -126,6 +126,9 @@ void SearchForSale(mng data, int n){
 			printf("Day %d: %d\n", data.day[i], data.sale[i]);
 		}	
 	}
+	if(!check_target){
+		printf("No valid value. Please type another target!\n");
+	}
 }
 
 
