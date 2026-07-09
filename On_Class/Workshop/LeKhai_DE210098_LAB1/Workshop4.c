@@ -6,7 +6,7 @@
 
 
 /*
-	Name: L� Kh?i
+	Name: Lê Khải
 	ID: DE210098
 	Project: Workshop4
 */
