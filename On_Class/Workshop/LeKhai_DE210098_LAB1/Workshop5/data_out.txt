@@ -1,0 +1,5 @@
+Statistics
+Sum: 220
+Average: 36.67
+Maximum: 75
+Minimum: 17

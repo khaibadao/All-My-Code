@@ -134,6 +134,7 @@ void SearchForSale(mng data, int n){
 
 int main()
 {
+
 	while(1){
 		menu();
 		do
@@ -143,6 +144,7 @@ int main()
 			if(choice < 1 || choice > 6) printf("Invalid value. Please try again");
 		}while(choice < 1 || choice > 6);
 		printf("\n");
+		
 		if(choice == 6){
 			printf("Exiting the program!\n");
 			break;
