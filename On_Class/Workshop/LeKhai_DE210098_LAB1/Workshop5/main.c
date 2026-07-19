@@ -17,6 +17,8 @@ void doo(int a[], int n){
 	printf("Average: %.2f\n", (double)sum/n);
 	printf("Maximum: %d\n", ma);
 	printf("Minimum: %d", mi);
+	
+	printf("\n\n Results written to data_out.txt");
 }
 
 int main()

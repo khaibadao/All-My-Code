@@ -3,3 +3,5 @@ Sum: 220
 Average: 36.67
 Maximum: 75
 Minimum: 17
+
+ Results written to data_out.txt
